@@ -1,0 +1,92 @@
+% Main Beamer document for "PINNs: Redes Neuronales Informadas por la Física"
+\documentclass[aspectratio=169,sn-mathphys-num]{beamer}
+
+% Font and math setup
+\usepackage{fontspec}
+\usepackage{unicode-math}
+\usepackage{graphicx}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[sorting=none]{biblatex}
+\usepackage{ragged2e}
+\usepackage{setspace}
+\usepackage{slashed}
+
+% Bibliography resource
+\addbibresource{./material/references.bib}
+
+% Theme and colors
+\usetheme[numbering=counter, progressbar=frametitle, background=light]{metropolis}
+\usecolortheme{dove}
+\definecolor{primary}{RGB}{88, 24, 124}
+\definecolor{secondary}{RGB}{0, 168, 150}
+
+% Beamer customization
+\setbeamercovered{transparent}
+\setbeamercolor{frametitle}{fg=white, bg=primary}
+\setbeamercolor{progress bar}{fg=secondary}
+\setbeamerfont{frametitle}{size=\large, series=\bfseries}
+\setbeamerfont{title}{size=\LARGE, series=\bfseries}
+\setbeamercolor{alerted text}{fg=secondary}
+\setbeamercolor{block title}{fg=primary}
+\setbeamercolor{block body}{bg=white}
+
+% Line spacing
+\setstretch{1.1}
+
+% Main fonts
+\setmainfont{Fira Sans}
+\setmathfont{TeX Gyre Pagella Math}
+
+% Title information
+\title{PINNs: Redes Neuronales Informadas por la Física}
+\subtitle{Conceptos, Aplicaciones y Recomendaciones}
+\author{Camilo Huertas \and Julian Avila \and Jose Luis Zamora}
+\institute{Universidad Distrital Francisco José de Caldas}
+\date{\today}
+
+\begin{document}
+
+% Title page
+\begin{frame}
+  \titlepage
+\end{frame}
+
+% Outline
+\begin{frame}{Outline}
+  \setbeamertemplate{section in toc}[sections numbered]
+  \tableofcontents
+\end{frame}
+
+% Parte 1: Problemas físicos complejos
+\section{Parte 1: Problemas físicos complejos}
+\input{./sections/part1.tex}
+
+% Parte 2: ¿Qué son las PINNs? Orígenes y características
+\section{Parte 2: ¿Qué son las PINNs?}
+\input{./sections/part2.tex}
+
+% Parte 3: Implementación de PINNs
+\section{Parte 3: Implementación de PINNs}
+\input{./sections/part3.tex}
+
+% Parte 4: Demostración práctica
+\section{Parte 4: Demostración práctica}
+\input{./sections/part4.tex}
+
+% References
+\section{References}
+\begin{frame}[allowframebreaks]{References}
+  \printbibliography
+  \nocite{*}
+\end{frame}
+
+% Closing slide
+\begin{frame}[plain]
+  \centering
+  \vspace{1cm}
+  {\Huge \textbf{Thank you!}}\\[1cm]
+  {\large Questions or comments?}
+\end{frame}
+
+\end{document}
+

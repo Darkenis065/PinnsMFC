@@ -1,0 +1,5 @@
+\beamer@sectionintoc {1}{Parte 1: Problemas físicos complejos}{3}{0}{1}
+\beamer@sectionintoc {2}{Parte 2: ¿Qué son las PINNs?}{6}{0}{2}
+\beamer@sectionintoc {3}{Parte 3: Implementación de PINNs}{11}{0}{3}
+\beamer@sectionintoc {4}{Parte 4: Demostración práctica}{17}{0}{4}
+\beamer@sectionintoc {5}{References}{24}{0}{5}

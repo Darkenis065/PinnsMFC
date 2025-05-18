@@ -1,0 +1,98 @@
+% Sección: Parte 3 – Implementación de PINNs
+
+% Frame 1: Configuración del entorno
+\begin{frame}{Configuración del entorno}
+  \begin{itemize}
+    \item Requisitos previos:
+      \begin{itemize}
+        \item Python 3.7+ (recomendado 3.8 o 3.9)
+        \item Virtualenv o Conda para entornos aislados
+        \item CUDA (opcional, para entrenamiento GPU)
+      \end{itemize}
+    \item Crear entorno con conda:
+      \begin{block}{}
+        \begin{verbatim}
+conda create -n pinns python=3.8
+conda activate pinns
+        \end{verbatim}
+      \end{block}
+    \item Alternativa usando virtualenv:
+      \begin{block}{}
+        \begin{verbatim}
+python3 -m venv pinns_env
+source pinns_env/bin/activate
+        \end{verbatim}
+      \end{block}
+  \end{itemize}
+\end{frame}
+
+% Frame 2: Instalación de DeepXDE
+\begin{frame}{Instalación de DeepXDE}
+  \begin{itemize}
+    \item DeepXDE: librería principal para PINNs en Python
+    \item Instalación vía pip:
+      \begin{block}{}
+        \begin{verbatim}
+pip install deepxde
+        \end{verbatim}
+      \end{block}
+    \item Verificar instalación:
+      \begin{block}{}
+        \begin{verbatim}
+python -c "import deepxde; print(deepxde.__version__)"
+        \end{verbatim}
+      \end{block}
+    \item Dependencias adicionales:
+      \begin{itemize}
+        \item TensorFlow 2.x (o PyTorch, según backend)
+        \item NumPy, SciPy, Matplotlib
+      \end{itemize}
+  \end{itemize}
+\end{frame}
+
+% Frame 3: Estructura básica de un script PINN
+\begin{frame}[fragile]{Estructura básica de un script PINN}
+  \begin{block}{Ejemplo en Python}
+    \begin{verbatim}
+import deepxde as dde
+import numpy as np
+
+def pde(x, y):
+    # Ejemplo: ecuación de Poisson u''(x) = f(x)
+    dy_xx = dde.grad.hessian(y, x)
+    return dy_xx + np.pi ** 2 * np.sin(np.pi * x)
+
+def boundary(_, on_boundary):
+    return on_boundary
+
+def func(x):
+    return np.sin(np.pi * x)
+
+    \end{verbatim}
+  \end{block}
+\end{frame}
+
+
+\begin{frame}[fragile]{Estructura básica de un script PINN}
+  \begin{block}{Ejemplo en Python}
+    \begin{verbatim}
+
+# Dominio y condiciones
+geom = dde.geometry.Interval(0, 1)
+bc = dde.DirichletBC(geom, func, boundary)
+
+# Definición del problema
+data = dde.data.PDE(geom, pde, bc, num_domain=50, num_boundary=2)
+
+# Red neuronal
+net = dde.maps.FNN([1] + [50] * 3 + [1], "tanh", "Glorot normal")
+
+# Modelo PINN
+model = dde.Model(data, net)
+model.compile("adam", lr=0.001)
+
+# Entrenamiento
+losshistory, _ = model.train(epochs=10000)
+    \end{verbatim}
+  \end{block}
+\end{frame}

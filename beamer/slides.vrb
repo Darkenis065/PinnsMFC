@@ -1,0 +1,18 @@
+\frametitle{Ejemplo 2: Ecuación de ondas}
+Código principal:
+  \begin{block}{Python}
+    \begin{verbatim}
+
+def bc_wave(x, on_boundary):
+    return on_boundary
+
+geo = dde.geometry.TimeDomain(0, 1) * dde.geometry.Interval(0, 1)
+ic1 = dde.IC(geo, ic, lambda x, _: np.isclose(x[0], 0))
+bc2 = dde.DirichletBC(geo, lambda x: 0, bc_wave)
+data2 = dde.data.TimePDE(geo, wave_pde, [ic1, bc2], num_domain=2000, num_initial=100, num_boundary=100)
+net2 = dde.maps.FNN([2] + [50]*4 + [1], "tanh", "Glorot normal")
+model2 = dde.Model(data2, net2)
+model2.compile("adam", lr=0.001)
+losshistory2, _ = model2.train(epochs=8000)
+    \end{verbatim}
+  \end{block}

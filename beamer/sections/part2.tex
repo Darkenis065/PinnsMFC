@@ -1,0 +1,53 @@
+% Sección: Parte 2 – ¿Qué son las PINNs?
+
+% Frame 1: Definición y motivación
+\begin{frame}{¿Qué son las PINNs?}
+  \begin{itemize}
+    \item Physics-Informed Neural Networks (PINNs): redes neuronales que incorporan términos de las ecuaciones físicas en la función de pérdida.
+    \item Combina datos (si disponibles) con conocimiento de leyes físicas (Ecuaciones diferenciales, condiciones de contorno).
+    \item Objetivo: aproximar soluciones a ecuaciones diferenciales sin necesidad de generadores de malla tradicionales.
+  \end{itemize}
+\end{frame}
+
+% Frame 2: ¿Por qué usar PINNs? ¿Cómo ayudan?
+\begin{frame}{¿Por qué y cómo nos ayudan las PINNs?}
+  \begin{itemize}
+    \item Sin mallas: evitan el mallado costoso de dominio complejo.
+    \item Generalización: una vez entrenada, la red evalúa la solución en cualquier punto sin recalcular todo el dominio.
+    \item Integración de datos experimentales: robustez y ajuste basado en observaciones.
+    \item Flexibilidad: adaptación a condiciones de frontera variadas y parámetros cambiantes.
+  \end{itemize}
+\end{frame}
+
+% Frame 3: Línea de tiempo de las PINNs
+\begin{frame}{Línea de tiempo de las PINNs}
+  \begin{itemize}
+    \item 2017: Raissi, Perdikaris & Karniadakis introducen el concepto en «Physics-informed neural networks: A deep learning framework for solving forward and inverse problems involving nonlinear partial differential equations.»
+    \item 2019: Extensiones a problemas de mecánica de fluidos y transferencia de calor.
+    \item 2020–2021: Desarrollo de librerías especializadas (DeepXDE, Modulus).
+    \item 2022–2024: Aplicaciones en mecánica cuántica, biología computacional y geociencias.
+  \end{itemize}
+\end{frame}
+
+% Frame 4: Ventajas y desventajas
+\begin{frame}{Ventajas y desventajas de las PINNs}
+  \begin{columns}
+    \column{0.48\textwidth}
+    \textbf{Ventajas:}
+    \begin{itemize}
+      \item Reducción de costos de mallado.
+      \item Capacidad de incorporar datos ruidosos.
+      \item Evaluación rápida tras entrenamiento.
+      \item Enfoque unificado para problemas directos e inversos.
+    \end{itemize}
+    \column{0.48\textwidth}
+    \textbf{Desventajas:}
+    \begin{itemize}
+      \item Entrenamiento costoso (optimización de funciones de pérdida complejas).
+      \item Requerimiento de hiperparámetros finos (arquitectura, parámetros de la pérdida).
+      \item Dificultad para problemas muy rígidos o con condiciones de contorno complicadas.
+      \item Riesgo de sobreajuste si hay pocos datos.
+    \end{itemize}
+  \end{columns}
+\end{frame}
+
