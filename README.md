@@ -7,3 +7,14 @@ from the bachelor degree on Physics, Universidad Distrital Francisco Jose de Cal
 - Jose L. Zamora -
 - Camilo A. Hurtas -
 - Julian L. Avila - julianlavilam@udistrital.edu.co
+
+## Content
+- Forward Problems (Keppler Problem, Heat Equation, Poisson, Klein-Gordon)
+- Inverse Problem (Navier Stokes - From DeepXDE lib)
+- Hamiltonian Neural Network (From %TODO DOi)
+
+## Dependencies
+- DeepXDE
+- Tensorflow
+- PyTorch
+- Matplotlib
