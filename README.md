@@ -11,7 +11,7 @@ from the bachelor degree on Physics, Universidad Distrital Francisco Jose de Cal
 ## Content
 - Forward Problems (Keppler Problem, Heat Equation, Poisson, Klein-Gordon)
 - Inverse Problem (Navier Stokes - From DeepXDE lib)
-- Hamiltonian Neural Network (From %TODO DOi)
+- Hamiltonian Neural Network (Simple Pendulum, Uniform Magnetic Field)
 
 ## Dependencies
 - DeepXDE
