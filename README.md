@@ -1,2 +1,20 @@
-# PinnsMFC
-Repository of the physics informed neural networks proyect for the physical-computational modeling course 2025-1 on the physics bacherlor of the UDFJC.
+# PINNs with DeepXDE
+Repository for the final project on Physics-Informed Neural Networks (PINNs)
+using the library DeepXDE for the Computational Physics Modelling course 2025-01
+from the bachelor degree on Physics, Universidad Distrital Francisco Jose de Caldas.
+
+## Contributors
+- Jose L. Zamora -
+- Camilo A. Hurtas -
+- Julian L. Avila - julianlavilam@udistrital.edu.co
+
+## Content
+- Forward Problems (Keppler Problem, Heat Equation, Poisson, Klein-Gordon)
+- Inverse Problem (Navier Stokes - From DeepXDE lib)
+- Hamiltonian Neural Network (From %TODO DOi)
+
+## Dependencies
+- DeepXDE
+- Tensorflow
+- PyTorch
+- Matplotlib

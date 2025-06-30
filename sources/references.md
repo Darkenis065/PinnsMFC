@@ -1,0 +1,11 @@
+- Au-Yeung, R., Camino, B., Rathore, O., & Kendon, V. (2023). Quantum algorithms for scientific computing. https://doi.org/10.48550/ARXIV.2312.14904
+- Greydanus, S., Dzamba, M., & Yosinski, J. (2019). Hamiltonian Neural Networks. arXiv. https://doi.org/10.48550/ARXIV.1906.01563
+- Griffiths, J. (2024). AI in physics: selected studies in classical andquantum mechanics. Durham Theses, Durham University. http://etheses.dur.ac.uk/15828/
+- Griffiths, J., Wrathmall, S. A., & Gardiner, S. A. (2025). Solving physics-based initial value problems with unsupervised machine learning. Physical Review E, 111(5), 055302. https://doi.org/10.1103/physreve.111.055302
+- Hu, B., & McDaniel, D. (2023). Applying Physics-Informed Neural Networks to Solve Navier–Stokes Equations for Laminar Flow around a Particle. Mathematical and Computational Applications, 28(5), 102. https://doi.org/10.3390/mca28050102
+- Lu, L., Meng, X., Mao, Z., & Karniadakis, G. E. (2021). DeepXDE: A deep learning library for solving differential equations. SIAM Review, 63(1), 208–228. https://doi.org/10.1137/19M1274067
+- Nasir, K., Reva, A., & Sekhar, J. (2025). Embedding Physics into Deep Learning: A Structured Review of Physics-Informed Neural Networks. https://doi.org/10.20944/preprints202504.2577.v1
+- Rai, R., & Sahu, C. K. (2020). Driven by Data or Derived Through Physics? A Review of Hybrid Physics Guided Machine Learning Techniques With Cyber-Physical System (CPS) Focus. IEEE Access, 8, 71050–71073. https://doi.org/10.1109/access.2020.2987324
+- Raissi, M., Perdikaris, P., & Karniadakis, G. E. (2019). Physics-informed neural networks: A deep learning framework for solving forward and inverse problems involving nonlinear partial differential equations. Journal of Computational Physics, 378, 686–707. https://doi.org/10.1016/j.jcp.2018.10.045
+- Raissi, Maziar, Perdikaris, P., Ahmadi, N., & Karniadakis, G. E. (2024). Physics-Informed Neural Networks and Extensions. arXiv. https://doi.org/10.48550/ARXIV.2408.16806
+- Trahan, C., Loveland, M., & Dent, S. (2024). Quantum Physics-Informed Neural Networks. Entropy, 26(8), 649. https://doi.org/10.3390/e26080649
