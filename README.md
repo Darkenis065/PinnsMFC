@@ -4,8 +4,8 @@ using the library DeepXDE for the Computational Physics Modelling course 2025-01
 from the bachelor degree on Physics, Universidad Distrital Francisco Jose de Caldas.
 
 ## Contributors
-- Jose L. Zamora -
-- Camilo A. Hurtas -
+- Jose L. Zamora - jlzamoraa@udistrital.edu.co
+- Camilo A. Hurtas - cahuertasa@udistrital.edu.co
 - Julian L. Avila - julianlavilam@udistrital.edu.co
 
 ## Content
